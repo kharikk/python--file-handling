@@ -12,7 +12,11 @@
     𝐱 -- To open a file in exclusive creation mode for write operation. If the file is already exists then will get 𝐅𝐢𝐥𝐞𝐄𝐱𝐢𝐬𝐭𝐬𝐄𝐫𝐫𝐨𝐫.
     *** If the modes are suffixed with "b" then it represents binary file.****
     ** Advantage of "with" statement is no need of closing the file after all the operations are done, will close it explicitly***
-    **tell() is a method which can be used to tell the current point of the cursors position. position starts at 0 like string index.
+    **tell() is a method which can be used to tell the current point of the cursors position. position starts at 0 like string index.***
     **seek() is a method to move cursors position to specified location.(f.seek(offset,fromwhere))
-    **Os.path.isfile(fname)--(checks whethere the file contains in the directory or not)
-    
+    **Os.path.isfile(fname)--(checks whethere the file contains in the directory or not).
+    w=csv.writer(f)## returns csv writer object
+    r=csv.reader(f)## returns csv reader object
+************************************zipping and unzipping files************************************************************
+f=Zipfile("files.zip", "w", ZIP_DEFLATED)-- to zip the file
+f=zipfile("files.zip", "r", ZIP_STORED)-- to unzip the file.
